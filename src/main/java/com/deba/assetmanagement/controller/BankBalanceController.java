@@ -1,6 +1,7 @@
 package com.deba.assetmanagement.controller;
 
 import com.deba.assetmanagement.dto.MonthlyAssetBalance;
+import com.deba.assetmanagement.util.Util;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,8 +39,10 @@ public class BankBalanceController {
 
     @GetMapping("/data")
     public List<MonthlyAssetBalance> getData(@RequestParam String year) {
-        return mockData.getOrDefault(year, List.of());
+        return mockData.getOrDefault(year, Util.previousYearData(mockData,year));
     }
+
+
 
     @PostMapping("/save")
     public ResponseEntity<String> saveData(@RequestParam String year,

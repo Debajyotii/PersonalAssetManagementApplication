@@ -6,15 +6,16 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark-mode {
+body.dark {
   background-color: #121212;
   color: #eee;
 }
 
 #themeToggle {
   position: fixed;
-  top: 10px; right: 10px;
-  padding: 5px 12px;
+  top: 10px;
+  right: 10px;
+  padding: 6px 14px;
   cursor: pointer;
   border: none;
   background-color: #007bff;
@@ -32,15 +33,11 @@ table {
   width: 100%;
   max-width: 900px;
   margin-bottom: 10px;
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #ccc;
 }
 
-table.dark-table {
+table.dark {
   background-color: #222;
   color: #eee;
-  border-color: #444;
 }
 
 th, td {
@@ -49,8 +46,12 @@ th, td {
   text-align: center;
 }
 
-table.dark-table th, table.dark-table td {
+table.dark th, table.dark td {
   border-color: #444;
+}
+
+table.dark th {
+  background-color: #222;
 }
 
 table th.month {
@@ -58,7 +59,7 @@ table th.month {
   color: #666;
 }
 
-table.dark-table th.month {
+table.dark th.month {
   background-color: #666;
   color: #fff;
 }
@@ -74,7 +75,7 @@ input[type=number] {
   transition: background-color 0.3s, color 0.3s;
 }
 
-input.dark-input {
+body.dark input[type=number] {
   background-color: #333;
   color: #eee;
   border: 1px solid #555;
@@ -98,19 +99,19 @@ button.removeAsset {
 
 .tooltip {
   position: absolute;
-  background: #eee;
-  color: #111;
+  background: #222;
+  color: #eee;
   padding: 5px 8px;
   border-radius: 3px;
   pointer-events: none;
   font-size: 13px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
 
-.tooltip.dark-tooltip {
-  background: #222;
-  color: #eee;
-  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+body.light .tooltip {
+  background: #eee;
+  color: #111;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
