@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 1rem;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+#themeToggle {
+  position: fixed;
+  top: 10px; right: 10px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+select, button {
+  margin: 0 5px 10px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+table.dark-table {
+  background-color: #222;
+  color: #eee;
+  border-color: #444;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+table.dark-table th, table.dark-table td {
+  border-color: #444;
+}
+
+table th.month {
+  background-color: #eee;
+  color: #666;
+}
+
+table.dark-table th.month {
+  background-color: #666;
+  color: #fff;
+}
+
+input[type=number] {
+  width: 70px;
+  padding: 3px 5px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #111;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+input.dark-input {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+button.removeAsset {
+  margin-left: 8px;
+  color: #d33;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#chart {
+  max-width: 900px;
+  height: 400px;
+}
+
+.tooltip {
+  position: absolute;
+  background: #eee;
+  color: #111;
+  padding: 5px 8px;
+  border-radius: 3px;
+  pointer-events: none;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.tooltip.dark-tooltip {
+  background: #222;
+  color: #eee;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
